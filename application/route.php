@@ -17,5 +17,15 @@ return [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
-
+    '[user]'      => [
+        'create'     => ['user/create'],
+        'update/:id' => ['user/update'],
+        'show'       => ['user/showOne'],
+        'all'        => ['user/showAll'],
+        'delete/:id' => ['user/delete'],
+    ],
+    '[article]'   => [
+        'create' => ['article/create'],
+        'all'    => ['article/all'],
+    ],
 ];
